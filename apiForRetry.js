@@ -21,8 +21,8 @@ const retryApiCall = (apiCbFn, maxRetries = 3, delayMs = 1000) => {
 						);
 					}
 				});
-    };
-    startCall();
+		};
+		startCall();
 	});
 };
 
@@ -30,7 +30,7 @@ const ranNum = () => {
 	return new Promise((resolve, reject) => {
 		let numGen = Math.random();
 		if (numGen > 0.6) {
-			resolve("Data fetched Successfully!");
+			resolve(`Data: ${numGen} fetched Successfully!`);
 		} else {
 			reject("Data fetching failed. Please retry again!");
 		}
@@ -42,5 +42,5 @@ retryApiCall(ranNum, 5, 1000)
 		console.log(`Data has fetched: ${data}, Number of retries: ${retries}`);
 	})
 	.catch((error) => {
-		console.error("Data fetching failed. This is finaal Error:",error.message );
+		console.error("Data fetching failed. This is finaal Error:", error.message);
 	});
