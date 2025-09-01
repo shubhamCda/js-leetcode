@@ -12,4 +12,4 @@ const primeNumber = (n) => {
   return true;
 }
 
-console.log(primeNumber(9973));
+console.log(primeNumber(103));
