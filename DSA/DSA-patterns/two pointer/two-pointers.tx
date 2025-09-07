@@ -1,0 +1,9 @@
+When to use Two Pointers?
+
+The data is sorted (common case).
+
+You need to search for pairs, triplets, or ranges.
+
+You want to reverse or check symmetry in strings/arrays.
+
+Problems where you’d normally use two loops.
