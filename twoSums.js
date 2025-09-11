@@ -6,11 +6,13 @@ let nums = [3, 2, 4], target = 6;
 
 const twoSum = function (nums, target) {
   for (let i = 0; i < nums.length - 1; i++) {
-    for (let j = 1+i; j < nums.length; j++) {
+    let j = nums.length - 1;
+    while (i < j) {
       if (nums[i] + nums[j] === target) {
         return [i, j];
       }
       
+      j--;
     }
     
   }
